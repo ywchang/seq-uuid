@@ -1,0 +1,29 @@
+{
+  "name": "seq-uuid",
+  "version": "1.0.0",
+  "description": "An util function to generate sequential UUID",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint '**/*.js'",
+    "test": "tape 'test/**/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ywchang/seq-uuid.git"
+  },
+  "author": "Yanwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ywchang/seq-uuid/issues"
+  },
+  "homepage": "https://github.com/ywchang/seq-uuid#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "tape": "^4.11.0"
+  }
+}
