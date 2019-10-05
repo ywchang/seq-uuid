@@ -1,3 +1,13 @@
+const getSeqBytes = (interval, length) => {
+  const seqBytes = []
+  let base = Date.now() / interval
+  for (let i = 0; i < length; i++) {
+    seqBytes.push(base & 0xff)
+    base >>>= 8
+  }
+  return seqBytes.reverse()
+}
+
 exports.format = (byteList) => {
   const part1 = Buffer.from(byteList.slice(0, 4)).toString('hex')
   const part2 = Buffer.from(byteList.slice(4, 6)).toString('hex')
@@ -8,8 +18,5 @@ exports.format = (byteList) => {
 }
 
 exports.generate = (interval, length) => {
-  const base = Date.now()
-  const byteList = []
-  byteList.push(base & 0xff)
-  return [0xcd]
+  return getSeqBytes(interval, length)
 }
