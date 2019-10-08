@@ -70,4 +70,14 @@ test('#generate', t => {
     sinon.restore()
     q.end()
   })
+
+  t.test('should generate version hex', q => {
+    sinon.stub(Date, 'now').returns(0xabcd)
+    sinon.stub(crypto, 'randomBytes').withArgs(16).returns(
+      Buffer.from([1, 2, 3, 4, 5, 22, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+    )
+    q.deepEqual(Buffer.from(generate(1, 1).slice(6, 7)).toString('hex'), '06')
+    sinon.restore()
+    q.end()
+  })
 })

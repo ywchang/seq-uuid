@@ -26,9 +26,14 @@ const format = (byteStream) => {
   return `${part1}-${part2}-${part3}-${part4}-${part5}`
 }
 
+const resetVersion = (byteStream) => {
+  byteStream[6] = byteStream[6] & 0x0f
+}
+
 const generate = (interval, length) => {
   const byteStream = getSeq(interval, length)
   fillRandom(byteStream)
+  resetVersion(byteStream)
   return byteStream
 }
 
