@@ -32,7 +32,7 @@ const generate = (interval, length) => {
   return byteStream
 }
 
-module.exports = (interval, length) => {
+module.exports = (interval = 60 * 1000, length = 2) => {
   return format(generate(interval, length))
 }
 
