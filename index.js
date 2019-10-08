@@ -18,6 +18,9 @@ const fillRandom = (byteStream) => {
 }
 
 const format = (byteStream) => {
+  if (byteStream.length !== 16) {
+    throw new Error('format error')
+  }
   const part1 = Buffer.from(byteStream.slice(0, 4)).toString('hex')
   const part2 = Buffer.from(byteStream.slice(4, 6)).toString('hex')
   const part3 = Buffer.from(byteStream.slice(6, 8)).toString('hex')

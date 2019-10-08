@@ -22,6 +22,12 @@ test('#format', t => {
       '01020304-0506-0708-090a-0b0c0d0e0f10')
     q.end()
   })
+
+  t.test('should throw error if bytes does not have length 16', q => {
+    q.throws(() => format([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]),
+      /format\serror/)
+    q.end()
+  })
 })
 
 test('#generate', t => {
