@@ -1,7 +1,13 @@
 {
   "name": "seq-uuid",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An util function to generate sequential UUID",
+  "keywords": [
+    "uuid",
+    "guid",
+    "sequential"
+  ],
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
@@ -12,7 +18,6 @@
     "url": "git+https://github.com/ywchang/seq-uuid.git"
   },
   "author": "Yanwei",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ywchang/seq-uuid/issues"
   },
