@@ -17,8 +17,8 @@ sequuid();
 ## Configurable Options
 
 Parameter | Meaning | Default Value | Unit
---- | --- | --- 
-interval | The duration within which the uuid generated will share the same sequential segment, the unit is ms. For example, if the value is 60 * 1000, that means within 1 minute, all uuid being generated will share the same sequential segment, which means, the uuids are not sorted, but out of 1 minute, the order is sorted | 60 * 1000 (1 minute) | millisecond
+--- | --- | --- | --- 
+interval | The duration within which the uuid generated will share the same sequential segment, the unit is ms. For example, if the value is 60 * 1000, that means within 1 minute, all uuid being generated will share the same sequential segment, which means, the uuids are not sorted, but out of 1 minute, the order is sorted | 60 * 1000 <br />(1 minute) | millisecond
 length | The unit is byte, meaning how many bytes are used to genrate the sequential segment, while rest are ramdom to make user uniqueness. This will decide how long the sequential segment will wrap around. | 2 | byte (8 bits)
 
 By default, the interval is 60 * 1000 ms and the length is 2 bytes, that means every 60 * 1000 * 2^16 ~ 45.5 days, the uuid sequential segment will wrap around once.
