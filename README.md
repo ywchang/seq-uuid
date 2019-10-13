@@ -1,4 +1,9 @@
-# seq-uuid [![Build Status](https://travis-ci.org/ywchang/seq-uuid.svg?branch=master)](https://travis-ci.org/ywchang/seq-uuid)
+# seq-uuid 
+
+[![Build Status](https://travis-ci.org/ywchang/seq-uuid.svg?branch=master)](https://travis-ci.org/ywchang/seq-uuid)
+[![NPM version](https://img.shields.io/npm/v/seq-uuid)](https://www.npmjs.com/package/seq-uuid)
+
+
 This is an utility function to generate sequential uuid, a node.js re-implementation based on timestamp approach referring to this post https://www.2ndquadrant.com/en/blog/sequential-uuid-generators/ and this github repo, https://github.com/tvondra/sequential-uuids. The credit goes to the original author.
 
 Below are examples of how to use this lib.
