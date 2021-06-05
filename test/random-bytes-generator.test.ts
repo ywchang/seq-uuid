@@ -2,11 +2,11 @@ import randomBytesGenerator from '../src/random-bytes-generator';
 import * as crypto from 'crypto';
 
 describe('RandomBytesGenerator', () => {
-  describe('#generate', () => {
-    afterEach(() => {
-      jest.restoreAllMocks();
-    });
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
 
+  describe('#generate', () => {
     it('should allocate random bytes with specified size', () => {
       const buffer = randomBytesGenerator.generate(16);
       expect(buffer.length).toEqual(16);
